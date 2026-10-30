@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ShiftLog")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c806314b40a997b05eacdc41b1797ad647d53972")]
 [assembly: System.Reflection.AssemblyProductAttribute("ShiftLog")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ShiftLog")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

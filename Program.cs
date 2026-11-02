@@ -1,4 +1,6 @@
-﻿var employee1 = new Employee
+﻿using ShiftLog.Commands;
+
+var employee1 = new Employee
 {
     Id = "E001",
     Name = "John Doe",
@@ -50,26 +52,34 @@ foreach (var week in weeks)
 
 
 
+
+
+
+
+
+
+
+
+
+
 Console.BackgroundColor = ConsoleColor.DarkBlue;
 Console.ForegroundColor = ConsoleColor.White;
 
 string welcomeMessage = "Welcome to the Shift Log Application!";
 
+var planningStore = new PlanningStore();
 
 
-
-Console.WriteLine("'quit' to exit.");
+Console.WriteLine("Type 'run console app1' to try the planning console example, 'set hours' to update a planning cell, or 'quit' to exit.");
 while (true)
 {
     Console.WriteLine("Enter a command:");
     string? input = Console.ReadLine();
-
-    if (input?.Trim().ToLower() == "quit")
+    var command = CommandParser.Parse(input);
+    if (!command.Execute(planningStore))
     {
         break;
     }
-
-    Console.WriteLine($"You entered: {input}");
 }
 
 // Reset console colors before exiting
